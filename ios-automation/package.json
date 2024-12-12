@@ -1,0 +1,37 @@
+{
+  "name": "ios-automation",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "wdio": "wdio run ./wdio.conf.js",
+    "wdio:stg": "NODE_ENV=stg wdio run ./wdio.conf.js",
+    "login": "npx wdio wdio.conf.js --spec ./test/specs/login.js",
+    "login:stg": "NODE_ENV=stg npx wdio wdio.conf.js --spec ./test/specs/login.js",
+    "login:prod": "NODE_ENV=prod npx wdio wdio.conf.js --spec ./test/specs/login.js",
+    "upload": "npx wdio wdio.conf.js --spec ./test/specs/upload-personal.js",
+    "tabBar": "npx wdio wdio.conf.js --spec ./test/specs/Personal-ActionRequired-Search.js",
+    "sidebar": "npx wdio wdio.conf.js --spec ./test/specs/Personal-Inbox-Search.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@wdio/appium-service": "^8.40.2",
+    "@wdio/local-runner": "^8.40.2",
+    "@wdio/mocha-framework": "^8.40.2",
+    "@wdio/spec-reporter": "^8.39.0",
+    "chai": "^4.3.7",
+    "dotenv": "^16.4.5",
+    "wdio-timeline-reporter": "^5.1.4"
+  },
+  "dependencies": {
+    "@wdio/appium-service": "^8.39.1",
+    "@wdio/cli": "^8.39.1",
+    "@wdio/local-runner": "^8.39.1",
+    "@wdio/mocha-framework": "^8.39.0",
+    "@wdio/spec-reporter": "^8.39.0",
+    "colors": "^1.4.0",
+    "custom-env": "^2.0.6"
+  }
+}
